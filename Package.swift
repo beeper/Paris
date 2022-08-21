@@ -54,4 +54,5 @@ let package = Package(
  .withPrivateFrameworkBinding("DataDetectorsCore")
  .withPrivateFrameworkBinding("IMDaemonCore", dependencies: ["IMSharedUtilities", "IMFoundation"])
  .withPrivateFrameworkBinding("DigitalTouchShared")
+ .withPrivateFrameworkBinding("Security")
  .withParisTarget()
