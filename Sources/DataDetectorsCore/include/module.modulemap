@@ -1,0 +1,3 @@
+module DataDetectorsCore {
+  header "DataDetectorsCore.h"
+}

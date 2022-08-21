@@ -1,0 +1,3 @@
+module CoreBrightness {
+  header "CoreBrightness.h"
+}

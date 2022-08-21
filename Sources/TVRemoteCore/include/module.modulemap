@@ -1,0 +1,3 @@
+module TVRemoteCore {
+  header "TVRemoteCore.h"
+}

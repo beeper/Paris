@@ -1,0 +1,3 @@
+module TemplateBinding {
+  header "TemplateBinding.h"
+}

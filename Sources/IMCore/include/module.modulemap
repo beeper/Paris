@@ -1,0 +1,3 @@
+module IMCore {
+  header "IMCore.h"
+}

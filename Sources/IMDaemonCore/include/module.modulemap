@@ -1,0 +1,3 @@
+module IMDaemonCore {
+  header "IMDaemonCore.h"
+}

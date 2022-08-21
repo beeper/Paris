@@ -1,0 +1,3 @@
+module IDSFoundation {
+  header "IDSFoundation.h"
+}
