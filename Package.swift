@@ -4,10 +4,10 @@
 import PackageDescription
 
 extension Target {
-    static func privateFrameworkBinding(_ name: String, dependencies: [Dependency] = []) -> Target {
+    static func privateFrameworkBinding(_ name: String, dependencies: [Dependency] = [], linkedFrameworkName: String? = nil) -> Target {
         .target(name: name, dependencies: dependencies, linkerSettings: [
             .unsafeFlags(["-F/System/Library/PrivateFrameworks"]),
-            .linkedFramework(name)
+            .linkedFramework(linkedFrameworkName ?? name)
         ])
     }
 }
@@ -21,10 +21,10 @@ extension Product {
 extension Package {
     static var privateFrameworksByPackageName: [String: [String]] = [:]
     
-    func withPrivateFrameworkBinding(_ name: String, dependencies: [Target.Dependency] = []) -> Package {
+    func withPrivateFrameworkBinding(_ name: String, dependencies: [Target.Dependency] = [], linkedFrameworkName: String? = nil) -> Package {
         Package.privateFrameworksByPackageName[self.name, default: []].append(name)
         products.append(.privateFrameworkBinding(name))
-        targets.append(.privateFrameworkBinding(name, dependencies: dependencies))
+        targets.append(.privateFrameworkBinding(name, dependencies: dependencies, linkedFrameworkName: linkedFrameworkName))
         return self
     }
     
@@ -55,4 +55,5 @@ let package = Package(
  .withPrivateFrameworkBinding("IMDaemonCore", dependencies: ["IMSharedUtilities", "IMFoundation"])
  .withPrivateFrameworkBinding("DigitalTouchShared")
  .withPrivateFrameworkBinding("Security")
+ .withPrivateFrameworkBinding("DarwinPrivate", linkedFrameworkName: "System")
  .withParisTarget()

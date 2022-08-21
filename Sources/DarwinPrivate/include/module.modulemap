@@ -1,0 +1,3 @@
+module DarwinPrivate {
+  header "DarwinPrivate.h"
+}
