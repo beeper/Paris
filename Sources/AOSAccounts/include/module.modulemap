@@ -1,0 +1,3 @@
+module AOSAccounts {
+  header "AOSAccounts.h"
+}

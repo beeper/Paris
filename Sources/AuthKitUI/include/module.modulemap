@@ -1,0 +1,3 @@
+module AuthKitUI {
+  header "AuthKitUI.h"
+}

@@ -1,0 +1,3 @@
+module LoggingSupport {
+  header "LoggingSupport.h"
+}

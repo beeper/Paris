@@ -102,9 +102,9 @@
 #import <_IMPingStatisticsCollector.h>
 #import <_IMTimingInstance.h>
 
-BOOL IMStringIsPhoneNumber(CFStringRef);
-BOOL IMStringIsBusinessID(CFStringRef);
-BOOL IMStringIsEmail(CFStringRef);
+BOOL IMStringIsEmail( NSString * string );
+BOOL IMStringIsPhoneNumber( NSString * string );
+BOOL IMStringIsBusinessID( NSString * string );
 CFStringRef IMCountryCodeForNumber(CFStringRef);
 NSString * IMFormatPhoneNumber(NSString *inputNumber, BOOL allowSpecialCharacters);
 NSString * IMFormattedDisplayStringForID(NSString * ID, NSInteger *outType);
@@ -261,5 +261,21 @@ typedef NS_ENUM(uint32_t, FZErrorType) {
 };
 
 NSString* IMRemoteObjectsRunLoopMode;
+
+NSString* const kFZDaemonPropertyEnableReadReceipts;
+NSString* const kFZDaemonPropertyGlobalReadReceiptsVersionID;
+
+NSString * _IMStringFromFZRegistrationErrorReason(int32_t errorReason);
+
+id IMGetCachedDomainValueForKey(NSString * domain, NSString * key);
+id IMGetDomainValueForKey(NSString * domain, NSString * key);
+void IMSetDomainValueForKey(NSString * domain, NSString * key, id value);
+
+NSString* const kFZServiceDefaultsAliasesKey;
+NSString* const kFZServiceDefaultsAliasKey;
+NSString* const kFZServiceDefaultsAliasStatusKey;
+NSString* const kFZServiceDefaultsAliasValidationErrorCodeKey;
+NSString* const kFZServiceDefaultsAliasValidationAlertInfoKey;
+NSString* const kFZServiceDefaultsVettedAliasesKey;
 
 #endif

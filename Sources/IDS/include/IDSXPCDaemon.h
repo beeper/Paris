@@ -5,6 +5,7 @@
 //
 
 @class NSString;
+@protocol IDSXPCPairing;
 
 @protocol IDSXPCDaemon
 - (void)interalTestingCollaboratorWithCompletion:(void (^)(id, NSError *))arg1;
@@ -12,7 +13,7 @@
 - (void)opportunisticCollaboratorWithCompletion:(void (^)(id, NSError *))arg1;
 - (void)reunionSyncCollaboratorForClientProcessName:(NSString *)arg1 withCompletion:(void (^)(id, NSError *))arg2;
 - (void)pairedDeviceManagerCollaboratorWithCompletion:(void (^)(id, NSError *))arg1;
-- (void)pairingCollaboratorWithCompletion:(void (^)(id, NSError *))arg1;
+- (void)pairingCollaboratorWithCompletion:(void (^)(id<IDSXPCPairing>, NSError *))arg1;
 - (void)activateWithCompletion:(void (^)(NSError *))arg1;
 @end
 

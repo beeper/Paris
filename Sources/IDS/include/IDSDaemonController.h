@@ -10,7 +10,7 @@
 
 @class IDSDaemonControllerForwarder, IDSDaemonListener, IMLocalObject, IMRemoteObject<IDSDaemonProtocol>, NSMutableDictionary, NSMutableSet, NSObject, NSProtocolChecker, NSSet, NSString;
 
-@interface IDSDaemonController : NSObject
+@interface IDSDaemonController : NSObject <IDSDaemonProtocol>
 {
     id _delegate;
     IMRemoteObject<IDSDaemonProtocol> *_remoteObject;
@@ -45,7 +45,9 @@
 + (void)_setApplicationWillTerminate;
 + (void)_blockUntilSendQueueIsEmpty;
 + (BOOL)_applicationWillTerminate;
-+ (id)sharedInstance;
+NS_ASSUME_NONNULL_BEGIN
++ (instancetype)sharedInstance;
+NS_ASSUME_NONNULL_END
 
 @property(retain, nonatomic) IMRemoteObject<IDSDaemonProtocol> *remoteObject; // @synthesize remoteObject=_remoteObject;
 @property(setter=_setAutoReconnect:) BOOL _autoReconnect; // @synthesize _autoReconnect;

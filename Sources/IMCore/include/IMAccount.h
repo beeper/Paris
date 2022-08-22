@@ -153,7 +153,7 @@ typedef NS_ENUM(NSInteger, IMAccountRegistrationFailureReason) {
 + (id)passwordForAccount:(id)arg1 forServiceName:(id)arg2;
 @property(readonly, nonatomic) BOOL justLoggedIn; // @synthesize justLoggedIn=_justLoggedIn;
 @property(readonly, nonatomic) IMPeople *buddyList; // @synthesize buddyList=_buddyList;
-@property(readonly, nonatomic, nullable) Presentity *loginIMHandle; // @synthesize loginIMHandle=_loginIMHandle;
+@property(readonly, nonatomic, nullable) IMHandle *loginIMHandle; // @synthesize loginIMHandle=_loginIMHandle;
 @property(readonly, nonatomic) NSDictionary *accountSubtypeInfo; // @synthesize accountSubtypeInfo=_subtypeInfo;
 @property(readonly, nonatomic) BOOL isActive; // @synthesize isActive=_isActive;
 @property(nonatomic) unsigned int blockingMode; // @synthesize blockingMode=_cachedBlockingMode;

@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)interface;
++ (NSXPCInterface*)interface;
 
 @end
 
