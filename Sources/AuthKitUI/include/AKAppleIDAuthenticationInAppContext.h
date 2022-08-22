@@ -10,7 +10,7 @@
 #import <AKAppleIDAuthenticationUIProvider-Protocol.h>
 
 @class AKNativeAccountRecoveryController, NSImage, NSString, NSView, NSWindow;
-@protocol AKAppleIDAuthenticationInAppContextAlertDelegate, AKAppleIDAuthenticationInAppContextPasswordDelegate, AKInAppAuthenticationUIProvider, CDPStateUIProvider;
+@protocol AKAppleIDAuthenticationInAppContextAlertDelegate, AKAppleIDAuthenticationInAppContextPasswordDelegate, CDPStateUIProvider;
 
 @interface AKAppleIDAuthenticationInAppContext : AKAppleIDAuthenticationContext <AKAppleIDAuthenticationUIProvider>
 {
@@ -34,7 +34,7 @@
     NSImage *_displayImage;
     NSString *_initialError;
     NSString *_windowTitle;
-    id<AKInAppAuthenticationUIProvider>  _inAppAuthUIProvider;
+    id  _inAppAuthUIProvider;
      id  _alertDelegate;
      id  _cdpUiProvider;
      id  __passwordDelegate;

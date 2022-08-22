@@ -3,9 +3,19 @@
 
 import PackageDescription
 
+let flags = [
+    "-Wno-nullability-completeness",
+    "-Wno-incomplete-umbrella",
+    "-Wno-objc-protocol-method-implementation",
+    "-Wno-arc-performSelector-leaks",
+    "-Wno-strict-prototypes",
+    "-Wno-property-attribute-mismatch",
+    "-Wno-visibility"
+]
+
 extension Target {
     static func privateFrameworkBinding(_ name: String, dependencies: [Dependency] = [], linkedFrameworkName: String? = nil) -> Target {
-        .target(name: name, dependencies: dependencies, linkerSettings: [
+        .target(name: name, dependencies: dependencies, cSettings: [.unsafeFlags(flags)], linkerSettings: [
             .unsafeFlags(["-F/System/Library/PrivateFrameworks"]),
             .linkedFramework(linkedFrameworkName ?? name)
         ])
