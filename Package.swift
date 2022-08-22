@@ -1,4 +1,4 @@
-// swift-tools-version: 5.6
+// swift-tools-version:5.4
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -52,7 +52,7 @@ let package = Package(
  .withPrivateFrameworkBinding("CoreBrightness")
  .withPrivateFrameworkBinding("HID")
  .withPrivateFrameworkBinding("DataDetectorsCore")
- .withPrivateFrameworkBinding("IMDaemonCore", dependencies: ["IMSharedUtilities", "IMFoundation"])
+ .withPrivateFrameworkBinding("IMDaemonCore")
  .withPrivateFrameworkBinding("DigitalTouchShared")
  .withPrivateFrameworkBinding("Security")
  .withPrivateFrameworkBinding("DarwinPrivate", linkedFrameworkName: "System")

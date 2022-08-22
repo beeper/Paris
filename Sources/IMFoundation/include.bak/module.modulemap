@@ -1,0 +1,3 @@
+module IMFoundation {
+  header "IMFoundation.h"
+}

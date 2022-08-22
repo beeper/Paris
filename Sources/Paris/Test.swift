@@ -29,7 +29,7 @@ import DataDetectorsCore
     _ = IMItem()
     _ = IMMessageItem()
     _ = IMMessage()
-    _ = IMChatStyle.groupChatStyle
+    _ = IMChatStyle.group
     _ = ("" as NSString)._bestGuessURI()
     _ = IMDIsRunningInDatabaseServerProcess()
     _ = IDSService()

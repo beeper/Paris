@@ -1,0 +1,3 @@
+module IMSharedUtilities {
+  header "IMSharedUtilities.h"
+}
