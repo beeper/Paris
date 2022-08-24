@@ -15,7 +15,7 @@ let flags = [
 
 extension Target {
     static func privateFrameworkBinding(_ name: String, dependencies: [Dependency] = [], linkedFrameworkName: String? = nil) -> Target {
-        .target(name: name, dependencies: dependencies, cSettings: [.unsafeFlags(flags)], linkerSettings: [
+        .target(name: name, dependencies: dependencies, cSettings: [.unsafeFlags(flags)], cxxSettings: [.unsafeFlags(flags)], linkerSettings: [
             .unsafeFlags(["-F/System/Library/PrivateFrameworks"]),
             .linkedFramework(linkedFrameworkName ?? name)
         ])
