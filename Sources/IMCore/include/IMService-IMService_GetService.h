@@ -14,5 +14,7 @@
 + (IMServiceImpl*)jabberService NS_SWIFT_NAME(jabber());
 + (IMServiceImpl*)subnetService NS_SWIFT_NAME(subnet());
 + (IMServiceImpl*)aimService NS_SWIFT_NAME(aim());
+@property (nonatomic, readonly, strong) NSString* name;
+@property (nonatomic, readonly, strong) NSArray<NSString*>* accountIDs;
 @end
 

@@ -173,7 +173,7 @@ typedef NS_ENUM(NSInteger, IMChatJoinState) {
 - (void)userToggledReadReceiptSwitch:(BOOL)arg1;
 - (void)setValue:(id)arg1 forChatProperty:(id)arg2;
 - (id)valueForChatProperty:(id)arg1;
-- (id)allChatProperties;
+- (NSDictionary*)allChatProperties;
 - (void)_setChatProperties:(id)arg1;
 - (BOOL)_isDuplicate:(id)arg1;
 - (void)resortMessages;

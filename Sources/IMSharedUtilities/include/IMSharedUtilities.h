@@ -283,3 +283,5 @@ NS_ASSUME_NONNULL_BEGIN
 -(BOOL)setupIfNeeded:(NSError *_Nullable* _Nullable)error;
 @end
 NS_ASSUME_NONNULL_END
+
+NSString* IMSharedMessageSummaryCreateWithShortName(int, IMMessageItem*, NSString*, NSString*, void(NSString*,int,int,int,int,BOOL*));
