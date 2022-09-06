@@ -6,7 +6,7 @@ import PackageDescription
 extension Target {
     static func privateFrameworkBinding(_ name: String, dependencies: [Dependency] = [], linkedFrameworkName: String? = nil) -> Target {
         .target(name: name, dependencies: dependencies, linkerSettings: [
-            .linkedFramework(linkedFrameworkName ?? name)
+            .unsafeFlags(["-F/System/Library/PrivateFrameworks", "-framework", linkedFrameworkName ?? name])
         ])
     }
 }
