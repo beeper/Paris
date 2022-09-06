@@ -39,7 +39,7 @@ let package = Package(
  .withPrivateFrameworkBinding("IMSharedUtilities", dependencies: ["IMFoundation"])
  .withPrivateFrameworkBinding("IMFoundation")
  .withPrivateFrameworkBinding("IMDPersistence", dependencies: ["IMSharedUtilities", "IMFoundation"])
- .withPrivateFrameworkBinding("LinkPresentation")
+ .withPrivateFrameworkBinding("LinkPresentationPrivate", linkedFrameworkName: "LinkPresentation")
  .withPrivateFrameworkBinding("IDSFoundation")
  .withPrivateFrameworkBinding("IDS", dependencies: ["IDSFoundation"])
  .withPrivateFrameworkBinding("FTServices", dependencies: ["IDSFoundation"])
