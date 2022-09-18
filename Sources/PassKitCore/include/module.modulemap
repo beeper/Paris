@@ -1,0 +1,3 @@
+module PassKitCore {
+  header "PassKitCore.h"
+}

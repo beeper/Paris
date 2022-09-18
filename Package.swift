@@ -67,4 +67,5 @@ let package = Package(
  .withPrivateFrameworkBinding("SkyLight")
  .withPrivateFrameworkBinding("AOSAccounts")
  .withPrivateFrameworkBinding("login")
+ .withPrivateFrameworkBinding("PassKitCore")
  .withParisTarget()
