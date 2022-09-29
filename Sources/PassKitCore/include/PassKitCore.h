@@ -128,6 +128,9 @@ typedef void (^PKAccountCompletionBlock)(NSArray<PKAccount*>*);
 @end
 
 @interface PKCreditAccountDetails: NSObject
+@property (nonatomic,copy) NSDate * lastUpdatedDate;
+@property (nonatomic,copy) NSString * currencyCode;
+@property (nonatomic,retain) NSTimeZone * productTimeZone;
 @property (nonatomic,copy) NSSet<PKPhysicalCard*> * physicalCards;
 @property (nonatomic,copy) NSSet<PKVirtualCard*> * virtualCards;
 @property (nonatomic,retain) PKCreditAccountSummary * accountSummary;
@@ -161,6 +164,24 @@ typedef void (^PKAccountCompletionBlock)(NSArray<PKAccount*>*);
 -(void)accountsWithCompletion:(PKAccountCompletionBlock)arg1;
 -(void)exportTransactionDataForAccountIdentifier:(NSString*)arg1 withFileFormat:(NSString*)arg2 beginDate:(NSDate*)arg3 endDate:(NSDate*)arg4 productTimeZone:(NSTimeZone*)arg5 completion:(PKAccountStatementExportBlock)arg6 ;
 -(void)creditStatementsForAccountIdentifier:(NSString*)arg1 completion:(PKAccountStatementListBlock)arg2 ;
+@end
+
+@interface PKPass: NSObject
+@property (assign,nonatomic) unsigned long long passType;
+@property (nonatomic,copy) NSString * organizationName;
+@property (nonatomic,copy,readonly) NSString * localizedName;
+@property (nonatomic,copy,readonly) NSString * localizedDescription;
+@end
+
+@interface PKSecureElementPass: PKPass
+@end
+
+@interface PKPaymentPass: PKSecureElementPass
+@end
+
+@interface PKPassLibrary: NSObject
++(instancetype)sharedInstance;
+-(NSArray<PKPass*>*)passes;
 @end
 
 NS_ASSUME_NONNULL_END
