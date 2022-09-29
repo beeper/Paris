@@ -68,4 +68,5 @@ let package = Package(
  .withPrivateFrameworkBinding("AOSAccounts")
  .withPrivateFrameworkBinding("login")
  .withPrivateFrameworkBinding("PassKitCore")
+ .withPrivateFrameworkBinding("ConfigurationProfiles")
  .withParisTarget()
