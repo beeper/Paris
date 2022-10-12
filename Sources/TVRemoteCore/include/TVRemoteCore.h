@@ -97,6 +97,7 @@ typedef NS_ENUM(NSInteger, TVRCDeviceDisconnectReason) {
 -(void)setDelegate:(id<TVRXKeyboardControllerDelegate>)delegate;
 -(NSString*)text;
 -(void)sendReturnKey;
+-(id<_TVRXKeyboardImpl>)_keyboardImpl;
 @end
 
 //@protocol TVRXDeviceDelegate
@@ -206,7 +207,7 @@ NSString* TVRCButtonTypeDescription(TVRCButtonType);
 -(void)disconnect;
 -(NSString*)name;
 -(NSString*)model;
--(NSString*)identifier;
+@property(nonatomic, readonly) NSString* identifier NS_SWIFT_NAME(id);
 -(int)connectionState;
 -(NSSet<TVRCButton*>*)supportedButtons;
 -(void)sendButtonEvent:(TVRCButtonEvent*)buttonEvent;
@@ -238,6 +239,8 @@ NSString* TVRCButtonTypeDescription(TVRCButtonType);
 -(void)start;
 -(void)stop;
 @end
+
+NSString* TVRCTouchPhaseDescription(int64_t);
 
 NS_ASSUME_NONNULL_END
 
