@@ -9,7 +9,7 @@
 #define HIDServicePlugin_h
 
 #import <Foundation/Foundation.h>
-#import <HIDBase.h>
+#import "HIDBase.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

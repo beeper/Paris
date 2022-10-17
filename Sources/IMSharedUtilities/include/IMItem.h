@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <IMFoundation.h>
+#import "IMFoundation.h"
 #import <Foundation/Foundation.h>
 
 @class NSData, NSDate, NSDictionary, NSString, IMMessage;

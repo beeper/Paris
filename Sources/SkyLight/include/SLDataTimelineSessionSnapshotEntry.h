@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <SLDataTimelineSessionEntry.h>
+#import "SLDataTimelineSessionEntry.h"
 
-#import <SLDataTimelineSession-Protocol.h>
-#import <SLDataTimelineSessionProcessCollection-Protocol.h>
-#import <SLXPCConvertible-Protocol.h>
+#import "SLDataTimelineSession-Protocol.h"
+#import "SLDataTimelineSessionProcessCollection-Protocol.h"
+#import "SLXPCConvertible-Protocol.h"
 
 @class NSArray;
 @protocol SLDataTimelineSessionProcessCollection;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <LFSessionAgentConnectionInterface-Protocol.h>
+#import "LFSessionAgentConnectionInterface-Protocol.h"
 
 @class NSString;
 @protocol OS_dispatch_queue;

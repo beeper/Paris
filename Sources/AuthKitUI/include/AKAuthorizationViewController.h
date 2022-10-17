@@ -7,8 +7,8 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKAuthorizationPaneAutomaticResizeDelegate-Protocol.h>
-#import <AKAuthorizationPaneViewControllerDelegate-Protocol.h>
+#import "AKAuthorizationPaneAutomaticResizeDelegate-Protocol.h"
+#import "AKAuthorizationPaneViewControllerDelegate-Protocol.h"
 
 @class AKAuthorizationNavigationController, AKAuthorizationPresentationContext, AKAuthorizationScopeChoices, NSString;
 @protocol AKAuthorizationViewControllerDelegate;

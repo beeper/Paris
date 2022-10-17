@@ -4,8 +4,8 @@
 
 
 #import <Foundation/Foundation.h>
-#import <HIDEventFields.h>
-#import <HIDEvent.h>
+#import "HIDEventFields.h"
+#import "HIDEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

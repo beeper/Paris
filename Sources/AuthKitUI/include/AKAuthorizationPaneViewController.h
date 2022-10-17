@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKAuthorizationPaneAutomaticResizeDelegate-Protocol.h>
+#import "AKAuthorizationPaneAutomaticResizeDelegate-Protocol.h"
 
 @class AKAuthorizationPaneContext, NSLayoutConstraint, NSMutableArray, NSStackView, NSString;
 @protocol AKAuthorizationEditableDataSources, AKAuthorizationPaneViewControllerDelegate, AKAuthorizationPaneAutomaticResizeDelegate;

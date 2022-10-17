@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKAuthorizationSubPaneAdding-Protocol.h>
+#import "AKAuthorizationSubPaneAdding-Protocol.h"
 
 @class NSView, NSViewController;
 

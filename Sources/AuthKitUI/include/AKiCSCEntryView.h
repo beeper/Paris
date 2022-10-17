@@ -7,7 +7,7 @@
 
 #import <AppKit/NSView.h>
 
-#import <AKPinFieldViewDelegate-Protocol.h>
+#import "AKPinFieldViewDelegate-Protocol.h"
 @protocol NSTextFieldDelegate;
 
 @class AKPinFieldView, NSString, NSTextField;

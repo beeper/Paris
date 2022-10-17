@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKFollowUpItemFactory-Protocol.h>
+#import "AKFollowUpItemFactory-Protocol.h"
 
 @class NSString;
 

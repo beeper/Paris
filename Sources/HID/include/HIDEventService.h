@@ -9,7 +9,7 @@
 #define HIDEventService_h
 
 #import <Foundation/Foundation.h>
-#import <HIDBase.h>
+#import "HIDBase.h"
 #import <IOKit/hidobjc/HIDServiceBase.h>
 
 @class HIDEvent;

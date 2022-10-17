@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ETMessage.h>
+#import "ETMessage.h"
 
 @class NSArray, NSMutableArray, UIColor;
 

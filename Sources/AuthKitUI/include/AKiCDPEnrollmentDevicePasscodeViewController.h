@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKiCSCEntryViewDelegate-Protocol.h>
+#import "AKiCSCEntryViewDelegate-Protocol.h"
 @protocol NSTableViewDelegate;
 
 @class AKiCDPDeviceValidationFlowViewController, AKiCDPValidationDevice, AKiCSCEntryView, NSString, NSView;

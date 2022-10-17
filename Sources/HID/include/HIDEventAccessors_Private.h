@@ -10,8 +10,8 @@
 #define HIDEventAccessors_Private_h
 
 #import <Foundation/Foundation.h>
-#import <HIDEvent.h>
-#import <HIDEventAccessors.h>
+#import "HIDEvent.h"
+#import "HIDEventAccessors.h"
 
 typedef uint32_t IOHIDGenericGestureType;
 typedef uint8_t IOHIDEventColorSpace;

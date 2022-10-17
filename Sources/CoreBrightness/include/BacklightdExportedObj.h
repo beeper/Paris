@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <BacklightdXPCProtocol-Protocol.h>
+#import "BacklightdXPCProtocol-Protocol.h"
 
 @class BrightnessSystemInternal, NSString, NSXPCConnection;
 

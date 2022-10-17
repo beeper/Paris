@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKInAppAuthenticationUIProvider-Protocol.h>
+#import "AKInAppAuthenticationUIProvider-Protocol.h"
 
 @class AKAppleIDAuthenticationInAppContext, AKAuthenticationPromptController, NSString;
 

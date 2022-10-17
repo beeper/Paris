@@ -7,8 +7,8 @@
 
 #import <objc/NSObject.h>
 
-#import <AKWebKitControllerDelegate-Protocol.h>
-#import <InternetAccountExportsAuthKit-Protocol.h>
+#import "AKWebKitControllerDelegate-Protocol.h"
+#import "InternetAccountExportsAuthKit-Protocol.h"
 
 @class AKWebKitController, JSContext, JSValue, NSDictionary, NSImage, NSMutableDictionary, NSString, NSView, NSWindow, WebView;
 @protocol AKICAUIDelegate, AKICAWebKitViewControllerDelegate, AKMBICAUIDelegate;

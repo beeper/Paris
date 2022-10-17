@@ -5,7 +5,7 @@
 //
 
 #import <objc/NSObject.h>
-#import <IMFileTransfer.h>
+#import "IMFileTransfer.h"
 
 @class NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSMutableSet;
 

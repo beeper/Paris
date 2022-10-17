@@ -7,7 +7,7 @@
 
 #import <AppKit/NSWindowController.h>
 
-#import <AKAuthorizationViewHostDelegate-Protocol.h>
+#import "AKAuthorizationViewHostDelegate-Protocol.h"
 
 @class AKAuthorizationViewHelper, AKCredentialRequestContext, NSWindow;
 

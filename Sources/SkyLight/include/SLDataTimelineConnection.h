@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <SLDataTimelineConnection-Protocol.h>
+#import "SLDataTimelineConnection-Protocol.h"
 
 @class NSString, SLDataTimelineSnapshotCollection;
 @protocol OS_dispatch_queue, OS_xpc_object;

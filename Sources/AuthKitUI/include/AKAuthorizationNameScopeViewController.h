@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKNameTextFieldDelegate-Protocol.h>
+#import "AKNameTextFieldDelegate-Protocol.h"
 @protocol NSTextFieldDelegate;
 
 @class NSArray, NSButton, NSLayoutConstraint, NSString, NSTextField;

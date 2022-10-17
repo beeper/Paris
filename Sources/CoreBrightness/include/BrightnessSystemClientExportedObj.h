@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <BacklightSystemDelegateXpcProtocol-Protocol.h>
+#import "BacklightSystemDelegateXpcProtocol-Protocol.h"
 
 @class BrightnessSystemClientInternal, NSString;
 @protocol OS_dispatch_queue;

@@ -9,7 +9,7 @@
 #define HIDConnection_h
 
 #import <Foundation/Foundation.h>
-#import <HIDBase.h>
+#import "HIDBase.h"
 #import <IOKit/hidobjc/HIDConnectionBase.h>
 
 NS_ASSUME_NONNULL_BEGIN

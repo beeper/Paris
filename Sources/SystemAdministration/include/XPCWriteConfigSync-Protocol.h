@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <FilesFinderWriteConfigSync-Protocol.h>
-#import <GroupsWriteConfigSync-Protocol.h>
-#import <KeyChainWriteConfigSync-Protocol.h>
-#import <SharingWriteConfigSync-Protocol.h>
-#import <UsersWriteConfigSync-Protocol.h>
+#import "FilesFinderWriteConfigSync-Protocol.h"
+#import "GroupsWriteConfigSync-Protocol.h"
+#import "KeyChainWriteConfigSync-Protocol.h"
+#import "SharingWriteConfigSync-Protocol.h"
+#import "UsersWriteConfigSync-Protocol.h"
 
 @class NSArray, NSData, NSDictionary, NSString, NSError;
 

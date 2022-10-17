@@ -7,8 +7,8 @@
 
 #import <objc/NSObject.h>
 
-#import <AKAppleIDAuthenticationLimitedUIProvider-Protocol.h>
-#import <AKAuthenticationContext-Protocol.h>
+#import "AKAppleIDAuthenticationLimitedUIProvider-Protocol.h"
+#import "AKAuthenticationContext-Protocol.h"
 @protocol NSSecureCoding;
 
 @class AKAnisetteData, AKDevice, NSArray, NSDictionary, NSNumber, NSSet, NSString, NSUUID;

@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKAnisetteProvisioningClientProtocol-Protocol.h>
+#import "AKAnisetteProvisioningClientProtocol-Protocol.h"
 
 @class NSString;
 @protocol AKAnisetteServiceProtocol;

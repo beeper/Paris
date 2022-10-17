@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-#import <SLDataTimelineSession-Protocol.h>
-#import <SLXPCConvertible-Protocol.h>
+#import "SLDataTimelineSession-Protocol.h"
+#import "SLXPCConvertible-Protocol.h"
 
 @protocol SLDataTimelineSessionProcessCollection;
 

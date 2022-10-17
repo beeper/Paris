@@ -7,7 +7,7 @@
 
 //#import <ViewBridge/NSRemoteViewController.h>
 
-#import <AKAuthorizationViewHostDelegate-Protocol.h>
+#import "AKAuthorizationViewHostDelegate-Protocol.h"
 
 @protocol AKAuthorizationViewHostDelegate;
 

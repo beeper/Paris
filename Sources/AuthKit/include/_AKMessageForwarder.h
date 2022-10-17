@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKAdaptiveServiceInterface-Protocol.h>
+#import "AKAdaptiveServiceInterface-Protocol.h"
 
 @interface _AKMessageForwarder : NSObject <AKAdaptiveServiceInterface>
 {

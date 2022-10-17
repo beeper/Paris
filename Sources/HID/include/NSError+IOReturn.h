@@ -9,7 +9,7 @@
 #define NSError_IOReturn_h
 
 #import <Foundation/Foundation.h>
-#import <HIDBase.h>
+#import "HIDBase.h"
 
 @interface NSError (IOReturn)
 

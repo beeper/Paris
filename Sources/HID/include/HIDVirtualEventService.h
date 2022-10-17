@@ -9,7 +9,7 @@
 #define HIDVirtualEventService_h
 
 #import <Foundation/Foundation.h>
-#import <HIDEvent.h>
+#import "HIDEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

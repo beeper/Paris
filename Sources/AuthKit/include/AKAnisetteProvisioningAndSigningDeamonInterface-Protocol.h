@@ -5,8 +5,8 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <AKAnisetteProvisioningDaemonProtocol-Protocol.h>
-#import <AKAppleIDSigningDaemonProtocol-Protocol.h>
+#import "AKAnisetteProvisioningDaemonProtocol-Protocol.h"
+#import "AKAppleIDSigningDaemonProtocol-Protocol.h"
 
 @protocol AKAnisetteProvisioningAndSigningDeamonInterface <AKAnisetteProvisioningDaemonProtocol, AKAppleIDSigningDaemonProtocol>
 @end

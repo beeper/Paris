@@ -6,9 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import <SLDataTimelineProcess-Protocol.h>
-#import <SLDataTimelineProcessWindows-Protocol.h>
-#import <SLXPCConvertible-Protocol.h>
+#import "SLDataTimelineProcess-Protocol.h"
+#import "SLDataTimelineProcessWindows-Protocol.h"
+#import "SLXPCConvertible-Protocol.h"
 
 @protocol SLDataTimelineProcessWindows;
 

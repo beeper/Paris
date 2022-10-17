@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKCredential-Protocol.h>
+#import "AKCredential-Protocol.h"
 
 @class AKUserInformation, NSArray, NSData, NSString;
 

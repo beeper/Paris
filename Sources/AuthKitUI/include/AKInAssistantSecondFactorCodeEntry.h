@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKPinFieldViewDelegate-Protocol.h>
+#import "AKPinFieldViewDelegate-Protocol.h"
 
 @class AKPinFieldView, NSButton, NSLayoutConstraint, NSNumber, NSObject, NSProgressIndicator, NSString, NSTextField, NSView;
 @protocol AKSecondFactorCodeEntryDelegate;

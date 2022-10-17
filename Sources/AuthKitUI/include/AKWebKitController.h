@@ -7,9 +7,9 @@
 
 #import <objc/NSObject.h>
 
-#import <WebFrameLoadDelegate-Protocol.h>
-#import <WebResourceLoadDelegate-Protocol.h>
-#import <WebUIDelegate-Protocol.h>
+#import "WebFrameLoadDelegate-Protocol.h"
+#import "WebResourceLoadDelegate-Protocol.h"
+#import "WebUIDelegate-Protocol.h"
 
 @class NSString, WebPreferences, WebView;
 @protocol AKWebKitControllerDelegate;

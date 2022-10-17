@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKBasicLoginAnimateProtocol-Protocol.h>
+#import "AKBasicLoginAnimateProtocol-Protocol.h"
 
 @class AKAppleIDAuthenticationController, AKAppleIDAuthenticationInAppContext, NSString;
 @protocol AKSignInViewControllerDelegate;

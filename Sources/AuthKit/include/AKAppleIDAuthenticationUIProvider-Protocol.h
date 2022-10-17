@@ -5,8 +5,8 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <AKAppleIDAuthenticationLimitedUIProvider-Protocol.h>
-#import <AKAppleIDServerAuthenticationUIProvider-Protocol.h>
+#import "AKAppleIDAuthenticationLimitedUIProvider-Protocol.h"
+#import "AKAppleIDServerAuthenticationUIProvider-Protocol.h"
 
 @class AKAccountRecoveryContext, NSString, NSError;
 

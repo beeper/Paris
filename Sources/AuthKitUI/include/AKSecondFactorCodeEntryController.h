@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKPinFieldViewDelegate-Protocol.h>
+#import "AKPinFieldViewDelegate-Protocol.h"
 @protocol NSTouchBarProvider;
 
 @class AKNoCodeReceivedController, AKPinFieldView, AKTouchBarController, NSButton, NSImage, NSImageCell, NSLayoutConstraint, NSNumber, NSObject, NSProgressIndicator, NSString, NSTextField, NSTouchBar, NSView;

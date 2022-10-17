@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKCredentialRequestProtocol-Protocol.h>
+#import "AKCredentialRequestProtocol-Protocol.h"
 
 @class NSString, NSUUID;
 

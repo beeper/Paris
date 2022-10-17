@@ -7,6 +7,6 @@
 
 #import <objc/NSObject.h>
 
-#import <AKFollowUpProvider-Protocol.h>
+#import "AKFollowUpProvider-Protocol.h"
 
 @class NSString;

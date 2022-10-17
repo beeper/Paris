@@ -7,7 +7,7 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKAppleIDAuthenticationInAppContextPasswordDelegate-Protocol.h>
+#import "AKAppleIDAuthenticationInAppContextPasswordDelegate-Protocol.h"
 
 @class AKPaddedTextFieldCell, NSButton, NSLayoutConstraint, NSProgressIndicator, NSString, NSTextField, NSView, OBPrivacyLinkController;
 

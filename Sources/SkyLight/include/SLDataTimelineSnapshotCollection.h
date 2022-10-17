@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-#import <SLDataTimelineSnapshotCollection-Protocol.h>
-#import <SLXPCExportable-Protocol.h>
+#import "SLDataTimelineSnapshotCollection-Protocol.h"
+#import "SLXPCExportable-Protocol.h"
 
 @class NSArray, NSMutableArray;
 

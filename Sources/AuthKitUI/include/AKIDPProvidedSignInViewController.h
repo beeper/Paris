@@ -7,8 +7,8 @@
 
 #import <AppKit/NSViewController.h>
 
-#import <AKIDPPresentationController-Protocol.h>
-#import <AKInAssistantNavigationHandler-Protocol.h>
+#import "AKIDPPresentationController-Protocol.h"
+#import "AKInAssistantNavigationHandler-Protocol.h"
 
 @class AKIDPHandler, NSButton, NSString, NSView, WKWebView;
 

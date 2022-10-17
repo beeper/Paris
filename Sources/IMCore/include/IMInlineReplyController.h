@@ -3,7 +3,7 @@
 // #import "IMMessage.h"
 // #import "IMInlineReplyChatItemRules.h"
 // #import "IMChat.h"
-#import <IMItem.h>
+#import "IMItem.h"
 
 @class IMItemsController, IMMessage, IMInlineReplyChatItemRules, IMChat;
 

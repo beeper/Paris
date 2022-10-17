@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <SLDataTimelineUpdate-Protocol.h>
+#import "SLDataTimelineUpdate-Protocol.h"
 
 @class SLDataTimelineConnection, SLDataTimelineSnapshotCollection;
 @protocol SLDataTimelineConnection;

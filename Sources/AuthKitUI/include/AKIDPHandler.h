@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <WKNavigationDelegate-Protocol.h>
+#import "WKNavigationDelegate-Protocol.h"
 
 @class AKServerRequestConfiguration, AKURLRequestApprover, NSString;
 @protocol AKIDPHandlerDelegate;

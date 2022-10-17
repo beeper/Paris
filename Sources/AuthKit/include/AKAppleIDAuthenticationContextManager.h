@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKAppleIDAuthenticationClientProtocol-Protocol.h>
+#import "AKAppleIDAuthenticationClientProtocol-Protocol.h"
 
 @class AKAppleIDAuthenticationController, NSMutableDictionary, NSString;
 @protocol AKAppleIDAuthenticationDelegate, OS_dispatch_queue;

@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-#import <AKAuthorizationUIProvider-Protocol.h>
+#import "AKAuthorizationUIProvider-Protocol.h"
 
 @class AKAuthorizationWindowController, NSString, NSWindow;
 

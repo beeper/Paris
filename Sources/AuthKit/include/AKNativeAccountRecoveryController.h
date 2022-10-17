@@ -7,7 +7,7 @@
 
 #import <objc/NSObject.h>
 
-//#import <CDPAuthProvider-Protocol.h>
+//#import "CDPAuthProvider-Protocol.h"
 
 @class AKAccountRecoveryContext, CDPRecoveryController, NSString;
 @protocol CDPStateUIProvider;

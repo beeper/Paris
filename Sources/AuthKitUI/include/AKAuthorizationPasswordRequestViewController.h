@@ -5,12 +5,12 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <AKAuthorizationPaneViewController.h>
+#import "AKAuthorizationPaneViewController.h"
 
-#import <AKAuthorizationEditableDataSources-Protocol.h>
-#import <AKAuthorizationPasswordAuthenticationDelegate-Protocol.h>
-#import <AKAuthorizationSubPaneConfirmButtonDelegate-Protocol.h>
-#import <AKAuthorizationSubPaneLoginChoiceDelegate-Protocol.h>
+#import "AKAuthorizationEditableDataSources-Protocol.h"
+#import "AKAuthorizationPasswordAuthenticationDelegate-Protocol.h"
+#import "AKAuthorizationSubPaneConfirmButtonDelegate-Protocol.h"
+#import "AKAuthorizationSubPaneLoginChoiceDelegate-Protocol.h"
 
 @class AKAuthorizationLoginChoice, AKAuthorizationPresentationContext, AKAuthorizationScopeChoices, AKAuthorizationSubPaneConfirmButton, AKAuthorizationSubPaneLoginChoice, AKAuthorizationViewController, AKTiburonPasswordUIReport, NSMutableArray, NSString;
 

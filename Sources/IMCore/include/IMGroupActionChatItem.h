@@ -5,7 +5,7 @@
 //
 
 #import "IMTranscriptChatItem.h"
-#import <IMGroupActionItem.h>
+#import "IMGroupActionItem.h"
 
 @class IMHandle;
 

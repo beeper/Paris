@@ -7,8 +7,8 @@
 
 #import <AppKit/NSWindowController.h>
 
-#import <AKAppleIDAuthenticationInAppContextPasswordDelegate-Protocol.h>
-#import <AuthWebViewDelegate-Protocol.h>
+#import "AKAppleIDAuthenticationInAppContextPasswordDelegate-Protocol.h"
+#import "AuthWebViewDelegate-Protocol.h"
 @protocol NSTouchBarProvider;
 
 @class AKAuthWebTabView, AKIDPHandler, AKIDPProvidedSignInViewController, AKKeepUsingController, AKNoCodeReceivedController, AKSecondFactorCodeEntryController, AKServerRequestConfiguration, AKSignInPromptController, AKTooManyAttemptsController, CDPEnrollViewController, NSImageView, NSMutableArray, NSString, NSTouchBar, NSView, NSWindow;

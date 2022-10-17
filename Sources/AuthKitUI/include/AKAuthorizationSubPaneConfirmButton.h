@@ -5,9 +5,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <AKAuthorizationSubPane.h>
+#import "AKAuthorizationSubPane.h"
 
-#import <LAUIAuthenticationDelegate-Protocol.h>
+#import "LAUIAuthenticationDelegate-Protocol.h"
 
 @class AKAuthorizationButton, AKAuthorizationPaneContext, LAUIAuthenticationView, NSObject, NSStackView, NSString, NSTextField, NSView;
 @protocol AKAuthorizationSubPaneConfirmButtonDelegate, OS_dispatch_group;

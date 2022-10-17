@@ -4,10 +4,10 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <CBModule.h>
+#import "CBModule.h"
 
-#import <CBContainerModuleProtocol-Protocol.h>
-#import <CBHIDServiceProtocol-Protocol.h>
+#import "CBContainerModuleProtocol-Protocol.h"
+#import "CBHIDServiceProtocol-Protocol.h"
 
 @class CBABCurve, CBABRamp, CBDisplayModule, NSMutableArray, NSString;
 

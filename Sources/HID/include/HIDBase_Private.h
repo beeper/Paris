@@ -9,7 +9,7 @@
 #define HIDBase_Private_h
 
 #import <Foundation/Foundation.h>
-#import <HIDBase.h>
+#import "HIDBase.h"
 
 /*!
  * @protocol HIDEventDispatcher

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import <DOAsyncResultProtocol-Protocol.h>
+#import "DOAsyncResultProtocol-Protocol.h"
 
 @interface DOAsyncResult : NSObject <DOAsyncResultProtocol>
 {

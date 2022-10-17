@@ -5,11 +5,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <AKBaseSignInViewController.h>
+#import "AKBaseSignInViewController.h"
 
-#import <AKAppleIDAuthenticationDelegate-Protocol.h>
-#import <AKAppleIDAuthenticationInAppContextAlertDelegate-Protocol.h>
-#import <AKAppleIDAuthenticationInAppContextPasswordDelegate-Protocol.h>
+#import "AKAppleIDAuthenticationDelegate-Protocol.h"
+#import "AKAppleIDAuthenticationInAppContextAlertDelegate-Protocol.h"
+#import "AKAppleIDAuthenticationInAppContextPasswordDelegate-Protocol.h"
 
 @class AKAppleIDAuthenticationController, AKRoundLoginContainerView, NSButton, NSLayoutConstraint, NSProgressIndicator, NSString, NSTextField, NSView;
 
