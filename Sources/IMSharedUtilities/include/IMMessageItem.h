@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 
-@class NSArray, NSAttributedString, NSData, NSDate, NSDictionary, NSString;
+@class NSArray, NSAttributedString, NSData, NSDate, NSDictionary, NSString, NSDate;
 
 @interface IMMessageItem : IMItem
 {
@@ -139,3 +139,7 @@ NS_ASSUME_NONNULL_END
 
 @end
 
+@interface IMMessageItem (Edits)
+- (BOOL)hasEditedParts API_AVAILABLE(macos(13.0), ios(16.0));
+- (NSDate *)dateEdited API_AVAILABLE(macos(13.0), ios(16.0));
+@end

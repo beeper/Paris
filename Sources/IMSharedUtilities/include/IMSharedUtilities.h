@@ -133,6 +133,7 @@
 #import <IMStickerPack.h>
 #import <IMSuperToPlainParserContext.h>
 #import <IMSuperToSuperSanitizerContext.h>
+#import <IMTapback.h>
 #import <IMTUConversationItem.h>
 #import <IMToSuperParserContext.h>
 #import <IMToSuperParserFrame.h>
@@ -214,11 +215,19 @@ NSString* IMMessageCreateThreadIdentifierWithOriginatorGUID(long long index, lon
 API_AVAILABLE(macos(10.16), ios(14.0), watchos(7.0))
 NSString* IMMessageCreateAssociatedMessageGUIDFromThreadIdentifier(NSString* identifier);
 
+API_DEPRECATED("Removed", macos(10.0, 12.5), ios(10.0, 15.2))
 NSArray<IMItem*> * FZCreateIMMessageItemsFromSerializedArray(NSArray * serialized) NS_RETURNS_RETAINED;
 
 BOOL IMSharedHelperPersonCentricMergingEnabled(void);
 
+API_DEPRECATED("Removed", macos(10.0, 12.5), ios(10.0, 15.2))
 NSArray * FZCreateSerializedIMMessageItemsfromArray(NSArray<IMMessageItem*> * imMessageItems) NS_RETURNS_RETAINED;
+
+API_AVAILABLE(macos(13.0), ios(16.0))
+NSArray * IMCreateItemsFromSerializedArray(NSArray * iMMessageItems) NS_RETURNS_RETAINED;
+
+API_AVAILABLE(macos(13.0), ios(16.0))
+NSArray * IMCreateSerializedItemsFromArray(NSArray * serialiedItems) NS_RETURNS_RETAINED;
 
 typedef NS_ENUM(int64_t, IMAssociatedMessageType) {
     IMAssociatedMessageTypeAcknowledgmentHeart                  = 2000,
