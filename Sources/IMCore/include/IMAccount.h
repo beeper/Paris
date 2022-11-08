@@ -16,6 +16,14 @@
 +(NSPredicate*)predicateForContactsMatchingHandleStrings:(NSArray*)strings;
 @end
 
+/**
+ IMAccount.loginStatus corresponds to IMAccount.loginStatusMessage, where
+ .loggedOut == "Offline",
+ .disconnected == "Disconnected",
+ .disconnecting == "Disconnecting",
+ .loggingIn == "Connecting",
+ .loggedIn == "Connected"
+ */
 typedef NS_ENUM(NSUInteger, IMAccountLoginStatus) {
     IMAccountStatusLoggedOut,
     IMAccountStatusDisconnected,
