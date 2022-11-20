@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class IMHandle, IMMessageItem, NSArray, NSAttributedString, NSData, NSDate, NSDictionary, NSError, NSString;
+@class IMHandle, IMMessageItem, NSArray, NSAttributedString, NSData, NSDate, NSDictionary, NSError, NSString, IMTapback;
 
 typedef NS_ENUM(NSInteger, IMMessageDescriptionType) {
     IMMessageDescriptionAccessibility,
@@ -160,5 +160,7 @@ typedef NS_ENUM(NSInteger, IMMessageDescriptionType) {
 - (void) setThreadOriginator:(IMMessage*)arg2 API_AVAILABLE(macos(10.16), ios(14.0), watchos(7.0));
 - (long long) replyCountsByPart API_AVAILABLE(macos(10.16), ios(14.0), watchos(7.0));
 - (void) setReplyCountsByPart:(long long)arg1 API_AVAILABLE(macos(10.16), ios(14.0), watchos(7.0));
+
+- (IMTapback *)tapback API_AVAILABLE(macos(13.0), ios(16.0));
 @end
 
