@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Paris",
+            "program": "${workspaceFolder:paris}/.build/debug/Paris",
+            "args": [],
+            "cwd": "${workspaceFolder:paris}",
+            "preLaunchTask": "swift: Build Debug Paris"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Paris",
+            "program": "${workspaceFolder:paris}/.build/release/Paris",
+            "args": [],
+            "cwd": "${workspaceFolder:paris}",
+            "preLaunchTask": "swift: Build Release Paris"
+        }
+    ]
+}

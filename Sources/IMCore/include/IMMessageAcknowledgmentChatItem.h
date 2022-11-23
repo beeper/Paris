@@ -5,12 +5,13 @@
 //
 
 #import "IMAssociatedMessageChatItem.h"
+#include <IMTapback.h>
 
 @interface IMMessageAcknowledgmentChatItem : IMAssociatedMessageChatItem
 {
     long long _messageAcknowledgmentType;
 }
-
+@property(readonly, nonatomic) IMTapback* tapback API_AVAILABLE(macos(13.0), ios(16.0));
 @property(readonly, nonatomic) long long messageAcknowledgmentType; // @synthesize messageAcknowledgmentType=_messageAcknowledgmentType;
 - (id)_initWithItem:(id)arg1 sender:(id)arg2 messageAcknowledgmentType:(long long)arg3;
 - (id)copyWithZone:(struct _NSZone *)arg1;

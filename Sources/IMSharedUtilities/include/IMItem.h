@@ -9,7 +9,7 @@
 #import "IMFoundation.h"
 #import <Foundation/Foundation.h>
 
-@class NSData, NSDate, NSDictionary, NSString, IMMessage;
+@class NSData, NSDate, NSDictionary, NSString, IMMessage, IMTapback;
 
 typedef NS_ENUM(int64_t, IMItemType) {
     IMItemTypeMessage,
@@ -114,6 +114,8 @@ typedef NS_ENUM(int64_t, IMItemType) {
 - (BOOL)isAssociatedMessageItem;
 - (id)pluginSessionGUID;
 - (id)consumedSessionPayloads;
+
+- (IMTapback *)tapback API_AVAILABLE(macos(13.0), ios(16.0));
 
 @end
 
