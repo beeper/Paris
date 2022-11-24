@@ -213,7 +213,7 @@ API_AVAILABLE(macos(10.16), ios(14.0), watchos(7.0))
 NSString* IMMessageCreateThreadIdentifierWithOriginatorGUID(long long index, long long end, long long start, NSString* guid);
 
 API_AVAILABLE(macos(10.16), ios(14.0), watchos(7.0))
-NSString* IMMessageCreateAssociatedMessageGUIDFromThreadIdentifier(NSString* identifier);
+NSString* IMMessageCreateAssociatedMessageGUIDFromThreadIdentifier(NSString* identifier) NS_RETURNS_RETAINED;
 
 API_DEPRECATED("Removed", macos(10.0, 12.5), ios(10.0, 15.2))
 NSArray<IMItem*> * FZCreateIMMessageItemsFromSerializedArray(NSArray * serialized) NS_RETURNS_RETAINED;
