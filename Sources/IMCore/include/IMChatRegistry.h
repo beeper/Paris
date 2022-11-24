@@ -312,3 +312,6 @@
 
 @end
 
+@interface IMChatRegistry (Rome)
+-(void) _loadChatsFilteredUsingPredicate:(NSPredicate*)arg2 lastMessageOlderThan:(id)arg3 limit:(unsigned long long)arg4 waitForReply:(bool)arg5 completionHandler:(void (^)(NSArray<IMChat*>*, NSError*))arg6;
+@end
