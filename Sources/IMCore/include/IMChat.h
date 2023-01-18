@@ -445,6 +445,10 @@ typedef NS_ENUM(NSInteger, IMChatJoinState) {
 - (void)sendDowngradePingForMessage:(id)arg1 manualDowngrade:(BOOL)arg2;
 - (void)refreshServiceForSending;
 
+// This may be available before Ventura, but I don't have a mac to check it on
+- (void)beginObservingHandleAvailability API_AVAILABLE(macos(13.0));
+- (void)endObservingHandleAvailability API_AVAILABLE(macos(13.0));
+
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) NSString *identifier;

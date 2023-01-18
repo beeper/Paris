@@ -269,7 +269,9 @@ NSString * _IMStringFromFZRegistrationErrorReason(int32_t errorReason);
 
 id IMGetCachedDomainValueForKey(NSString * domain, NSString * key);
 id IMGetDomainValueForKey(NSString * domain, NSString * key);
+BOOL IMGetDomainBoolForKey(NSString * domain, NSString * key);
 void IMSetDomainValueForKey(NSString * domain, NSString * key, id value);
+void IMSetDomainBoolForKey(NSString * domain, NSString * key, BOOL value);
 
 NSString* const kFZServiceDefaultsAliasesKey;
 NSString* const kFZServiceDefaultsAliasKey;
