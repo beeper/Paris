@@ -85,7 +85,7 @@ typedef NS_ENUM(NSInteger, IMMessageDescriptionType) {
 @property(retain, nonatomic) NSString *expressiveSendStyleID; // @synthesize expressiveSendStyleID=_expressiveSendStyleID;
 @property(retain, nonatomic) NSString *sourceApplicationID; // @synthesize sourceApplicationID=_sourceApplicationID;
 @property(retain, nonatomic) NSString *associatedBalloonBundleID; // @synthesize associatedBalloonBundleID=_associatedBalloonBundleID;
-@property(retain, nonatomic) NSData *payloadData; // @synthesize payloadData=_payloadData;
+@property(retain, nonatomic, nullable) NSData *payloadData; // @synthesize payloadData=_payloadData;
 @property(retain, nonatomic) NSString *balloonBundleID; // @synthesize balloonBundleID=_balloonBundleID;
 @property(retain, nonatomic, setter=_updateLocale:) NSString *locale; // @synthesize locale=_locale;
 @property(retain, nonatomic, setter=_updateBizIntent:) NSDictionary *bizIntent; // @synthesize bizIntent=_bizIntent;

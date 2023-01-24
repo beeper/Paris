@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class DDScannerResult, IMChat, IMMessage, IMPluginPayload, LPLinkMetadata, NSArray, NSAttributedString, NSData, NSMutableSet, NSString, NSURL;
+@class DDScannerResult, IMChat, IMMessage, IMPluginPayload, LPLinkMetadata, LPMessagesPayload, NSArray, NSAttributedString, NSData, NSMutableSet, NSString, NSURL;
 
 @interface IMBalloonPluginDataSource : NSObject
 {
@@ -110,6 +110,13 @@
 @property(readonly, nonatomic) NSArray *allPayloads;
 - (id)initWithPluginPayload:(id)arg1;
 - (id)initWithMessageGUID:(id)arg1 payload:(id)arg2 dataDetectedResult:(id)arg3 url:(id)arg4;
+- (void)dispatchMetadataUpdateToAllClients API_AVAILABLE(macos(13.0), ios(16.0));
+- (void)dispatchDidReceiveMetadataToAllClients API_DEPRECATED("Use dispatchMetadataUpdateToAllClients on ventura and later", macos(10.0, 12.5), ios(5.0, 15.2));
+- (void)_didFetchMetadata:(LPLinkMetadata *)metadata error:(NSError **)error NS_SWIFT_NAME(_didFetchMetadata(_:error:));
+- (void)updateRichLinkWithFetchedMetadata:(LPLinkMetadata * _Nonnull)metadata NS_SWIFT_NAME(updateRichLink(with:));
+- (void)_startFetchingMetadata;
+- (void)createEmptyMetadataWithOriginalURL;
+@property(nonatomic, nonnull) LPMessagesPayload *richLink;
 
 @end
 
