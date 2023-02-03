@@ -5,9 +5,25 @@ import PackageDescription
 
 extension Target {
     static func privateFrameworkBinding(_ name: String, dependencies: [Dependency] = [], linkedFrameworkName: String? = nil) -> Target {
-        .target(name: name, dependencies: dependencies, linkerSettings: [
-            .unsafeFlags(["-F/System/Library/PrivateFrameworks", "-framework", linkedFrameworkName ?? name])
-        ])
+        .target(
+            name: name,
+            dependencies: dependencies,
+            cSettings: [
+                .unsafeFlags([
+                    "-Wno-nullability-completeness",
+                    "-Wno-incomplete-umbrella",
+                    "-Wno-objc-protocol-method-implementation",
+                    "-Wno-arc-performSelector-leaks",
+                    "-Wno-strict-prototypes",
+                    "-Wno-property-attribute-mismatch",
+                    "-Wno-visibility",
+                    "-Wno-implicit-int"
+                ])
+            ],
+            linkerSettings: [
+                .unsafeFlags(["-F/System/Library/PrivateFrameworks", "-framework", linkedFrameworkName ?? name])
+            ]
+        )
     }
 }
 
