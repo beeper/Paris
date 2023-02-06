@@ -17,6 +17,7 @@
 @class LPImage;
 @class LPVideo;
 @class LPAudio;
+@class LPMessagesPayload;
 
 @interface LPLinkMetadata (Private)
 @property (nonatomic, copy, nullable) NSURL *URL;
@@ -122,6 +123,15 @@
 - (instancetype)initWithData:(NSData *)data MIMEType:(NSString *)MIMEType;
 - (instancetype)initByReferencingFileURL:(NSURL *)fileURL MIMEType:(NSString *)MIMEType properties:(LPAudioProperties *)properties;
 - (instancetype)initWithData:(NSData *)data MIMEType:(NSString *)MIMEType properties:(LPAudioProperties *)properties;
+@end
+
+API_AVAILABLE(macos(10.15))
+@interface LPMessagesPayload: NSObject
+@property (nonatomic, nonnull) LPLinkMetadata *metadata;
+@property (nonatomic, getter=isPlaceholder, setter=setPlaceholder:) BOOL placeholder;
+@property (nonatomic) BOOL needsCompleteFetch;
+@property (nonatomic) BOOL needsSubresourceFetch;
+- (NSData * _Nonnull)dataRepresentationWithOutOfLineAttachments:(NSArray * _Nullable * _Nullable)attachments;
 @end
 
 
