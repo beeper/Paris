@@ -87,7 +87,8 @@
 - (void)__blockUntilQueriesComplete;
 - (NSDictionary<NSString*, IMChat*>*)_chatGUIDToChatMap; // removed in monterey
 - (NSDictionary<NSString*, IMChat*>*)chatGUIDToChatMap; // introduced in monterey
-- (NSArray<IMChat*>* _Nonnull)_chatsWithMessageGUID:(NSString*)arg1;
+- (NSArray<IMChat*>* _Nonnull)_chatsWithMessageGUID:(NSString * _Nonnull)arg1 API_DEPRECATED("Use _cachedChatsWithMessageGUID on ventura and later", macos(10.0, 12.5), ios(5.0, 15.2));
+- (NSArray<IMChat*>* _Nonnull)_cachedChatsWithMessageGUID:(NSString * _Nonnull)arg1 API_AVAILABLE(macos(13.0), ios(16.0));
 - (id)_chatsWithMessage:(id)arg1;
 - (NSArray<NSString*>*)_allGUIDsForChat:(id)arg1; // removed in monterey
 - (NSArray<NSString*>*)allGUIDsForChat:(id)arg1; // introduced in monterey
@@ -117,15 +118,17 @@
 - (IMChat*)exisitingChatForGroupID:(NSString*)arg1;
 - (id)existingChatForRoom:(id)arg1 onAccount:(id)arg2;
 - (id)existingChatForIMHandles:(id)arg1;
-- (IMChat*)existingChatForIMHandle:(IMHandle*)arg1;
-- (IMChat*)existingChatWithGUID:(NSString*)arg1;
-- (id)existingChatForPersonID:(id)arg1;
-- (id)existingChatWithDisplayName:(id)arg1;
-- (IMChat*)existingChatWithChatIdentifier:(id)arg1;
-- (IMChat*)existingChatWithGroupID:(NSString*)arg1;
+- (IMChat* _Nullable)existingChatForIMHandle:(IMHandle*)arg1;
+- (IMChat* _Nullable)existingChatWithGUID:(NSString*)arg1;
+- (id _Nullable)existingChatForPersonID:(id)arg1;
+- (id _Nullable)existingChatWithDisplayName:(id)arg1;
+- (IMChat* _Nullable)existingChatWithChatIdentifier:(id)arg1;
+- (IMChat* _Nullable)existingChatWithGroupID:(NSString*)arg1;
 - (id)_lookupExistingChatWithIMHandle:(id)arg1;
-- (id)_existingChatWithIdentifier:(id)arg1 style:(unsigned char)arg2 account:(id)arg3;
-- (id)_existingChatWithIdentifier:(id)arg1 style:(unsigned char)arg2 service:(id)arg3;
+- (IMChat * _Nullable)_existingChatWithIdentifier:(id _Nonnull)arg1 style:(unsigned char)arg2 account:(NSString * _Nonnull)arg3;
+// `service` should be either @"iMessage" or @"SMS"; an IMServiceImpl.name (I think)
+- (IMChat * _Nullable)_existingChatWithIdentifier:(id _Nonnull)arg1 style:(unsigned char)arg2 service:(NSString * _Nonnull)arg3;
+- (IMChat * _Nullable)_cachedChatWithIdentifier:(id _Nonnull)arg1 API_AVAILABLE(macos(13.0), ios(16.0));
 @property(readonly, nonatomic) NSArray<IMChat*> *allExistingChats;
 @property(readonly, nonatomic) unsigned long long numberOfExistingChats;
 - (void)_setChatHasCommunicatedOveriMessage:(id)arg1;

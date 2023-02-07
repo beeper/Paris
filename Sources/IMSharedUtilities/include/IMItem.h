@@ -9,7 +9,7 @@
 #import "IMFoundation.h"
 #import <Foundation/Foundation.h>
 
-@class NSData, NSDate, NSDictionary, NSString, IMMessage, IMTapback;
+@class NSData, NSDate, NSDictionary, NSString, IMMessage, IMTapback, IMServiceImpl;
 
 typedef NS_ENUM(int64_t, IMItemType) {
     IMItemTypeMessage,
@@ -81,7 +81,7 @@ typedef NS_ENUM(int64_t, IMItemType) {
 @property(retain, nonatomic) NSString *accountID; // @synthesize accountID=_accountID;
 @property(retain, nonatomic) NSString *unformattedID; // @synthesize unformattedID=_unformattedID;
 @property(retain, nonatomic) NSString *account; // @synthesize account=_account;
-@property(retain, nonatomic) NSString *service; // @synthesize service=_service;
+@property(retain, nonatomic) NSString *service;
 @property(retain, nonatomic) NSString *handle; // @synthesize handle=_handle;
 @property(readonly, nonatomic) BOOL isLastMessageCandidate;
 @property(readonly, nonatomic) BOOL isFirstMessageCandidate;
@@ -93,6 +93,7 @@ typedef NS_ENUM(int64_t, IMItemType) {
 @property(retain, nonatomic, nullable) NSString *sender;
 @property(readonly, nonatomic) BOOL isFromMe;
 - (id)dictionaryRepresentation;
+- (IMServiceImpl * _Nullable)_service API_AVAILABLE(macos(13.0), ios(16.0));
 - (id)copyDictionaryRepresentation;
 - (id)initWithIMRemoteObjectSerializedDictionary:(id)arg1;
 - (void)encodeWithIMRemoteObjectSerializedDictionary:(id)arg1;
