@@ -8,7 +8,7 @@
 
 #import "IDSDaemonListenerProtocol.h"
 
-@class NSMapTable, NSMutableDictionary, NSObject, NSString;
+@class NSMapTable, NSMutableDictionary, NSObject, NSString, CUTResult<T>;
 
 @interface _IDSIDQueryController : NSObject
 {
@@ -41,7 +41,8 @@
 - (BOOL)_sync_currentIDStatusForDestinations:(id)arg1 service:(id)arg2 listenerID:(id)arg3 completionBlock:(id)arg4;
 - (BOOL)_sync_refreshIDStatusForDestinations:(id)arg1 service:(id)arg2 listenerID:(id)arg3 completionBlock:(id)arg4;
 - (BOOL)_refreshIDStatusForDestinations:(id)arg1 service:(id)arg2 listenerID:(id)arg3 allowRefresh:(BOOL)arg4 waitForReply:(BOOL)arg5 forceRefresh:(BOOL)arg6 queue:(id)arg7 completionBlock:(id)arg8;
-- (void)_idStatusForDestinations:(id)arg1 service:(id)arg2 listenerID:(id)arg3 allowRenew:(BOOL)arg4 waitForReply:(BOOL)arg5 forceRefresh:(BOOL)arg6 completionBlock:(id)arg7;
+- (void)_idStatusForDestinations:(id)arg1 service:(id)arg2 listenerID:(id)arg3 allowRenew:(BOOL)arg4 waitForReply:(BOOL)arg5 forceRefresh:(BOOL)arg6 completionBlock:(id)arg7 API_DEPRECATED("Use the method with more arguments instead", macos(10.0, 12.5));
+- (void)_idStatusForDestinations:(NSArray<NSString *>*)arg1 service:(NSString *)arg2 listenerID:(NSString *)arg3 allowRenew:(BOOL)arg4 respectExpiry:(BOOL)arg5 waitForReply:(BOOL)arg6 forceRefresh:(BOOL)arg7 bypassLimit:(BOOL)arg8 completionBlock:(void (^_Nonnull)(CUTResult<NSDictionary<NSString *, NSNumber *>*>*))arg9 API_AVAILABLE(macos(13.0));
 - (void)_setCurrentIDStatus:(long long)arg1 forDestination:(id)arg2 service:(id)arg3;
 - (id)_delegateMapForListenerID:(id)arg1 service:(id)arg2;
 - (void)_callDelegatesWithBlock:(id)arg1 delegateMap:(id)arg2;

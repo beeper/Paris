@@ -1,0 +1,3 @@
+module CommonUtilities {
+  header "CommonUtilities.h"
+}
