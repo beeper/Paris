@@ -241,8 +241,8 @@ typedef NS_ENUM(NSInteger, IMAccountRegistrationFailureReason) {
 @property(readonly, nonatomic, nonnull) NSArray<NSString*> *aliases;
 @property(readonly, nonatomic, getter=isMakoAccount) BOOL makoAccount;
 - (id)_statuses;
-- (id)_aliasInfoForAlias:(id)arg1;
-- (BOOL)_aliasIsVisible:(id)arg1;
+- (NSDictionary<NSString *, id> * _Nullable)_aliasInfoForAlias:(NSString * _Nonnull)arg1;
+- (BOOL)_aliasIsVisible:(id _Nonnull)arg1;
 - (id)_aliases;
 @property(readonly, nonatomic) NSArray *aliasesToRegister;
 @property(readonly, nonatomic) NSArray<NSString*> *vettedAliases;

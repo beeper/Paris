@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDaIMDaemonListenernary, NSMutableArray, NSMutableDictionary, NSProtocolChecker, NSString;
+@class NSArray, NSMutableArray, NSMutableDictionary, NSProtocolChecker, NSString;
 
 @interface IMDaemonListener : NSObject
 {

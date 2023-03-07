@@ -163,8 +163,8 @@ typedef NS_ENUM(NSInteger, IMChatJoinState) {
 - (void)join;
 @property(retain, nonatomic) IMHandle *recipient;
 - (void)setRecipient:(id)arg1 locally:(BOOL)arg2;
-- (void)_setAccount:(id)arg1 locally:(BOOL)arg2;
-- (void)_setAccount:(id)arg1;
+- (void)_setAccount:(IMAccount *)arg1 locally:(BOOL)arg2;
+- (void)_setAccount:(IMAccount *)arg1;
 - (BOOL)_hasCommunicatedOnService:(id)arg1;
 - (id)_generatePersonCentricID;
 - (void)setValue:(id)arg1 forProperty:(id)arg2 ofParticipant:(id)arg3;

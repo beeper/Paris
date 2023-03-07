@@ -44,6 +44,7 @@ let package = Package(
  .withPrivateFrameworkBinding("IDS", dependencies: ["IDSFoundation"])
  .withPrivateFrameworkBinding("FTServices", dependencies: ["IDSFoundation"])
  .withPrivateFrameworkBinding("CoreSymbolication")
+ .withPrivateFrameworkBinding("CommonUtilities")
  .withPrivateFrameworkBinding("CommunicationsFilter")
  .withPrivateFrameworkBinding("TextInput")
  .withPrivateFrameworkBinding("RemoteTextInput", dependencies: ["TextInput"])

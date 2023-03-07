@@ -27,6 +27,7 @@ typedef void (^IMAttachmentSyncFetchOperationCompletionBlock)(NSError * _Nullabl
 - (IMMessageItem *) storeMessage:(IMMessageItem *)message forceReplace:(BOOL)force modifyError:(BOOL)modifyError modifyFlags:(BOOL)modifyFlags flagMask:(uint64_t)flagMask updateMessageCache:(BOOL)updateMessageCache calculateUnreadCount:(BOOL)calculateUnreadCount;
 - (IMMessageItem *) storeMessage:(IMMessageItem *)message forceReplace:(BOOL)force modifyError:(BOOL)modifyError modifyFlags:(BOOL)modifyFlags flagMask:(uint64_t)flagMask;
 - (void)setSuppressDatabaseUpdates:(BOOL)suppress;
+- (BOOL)isSuppressDatabaseUpdates;
 @end
 
 NS_ASSUME_NONNULL_END
