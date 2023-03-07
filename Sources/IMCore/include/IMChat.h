@@ -122,7 +122,7 @@ typedef NS_ENUM(NSInteger, IMChatJoinState) {
 @property(nonatomic) void *contextInfo; // @synthesize contextInfo=_context;
 @property(readonly, nonatomic) IMChatStyle chatStyle; // @synthesize chatStyle=_style;
 @property(readonly, nonatomic) NSArray<IMHandle*> *participants; // @synthesize participants=_participants;
-@property(readonly, nonatomic) IMAccount *account; // @synthesize account=_account;
+@property(readonly, nonatomic, nonnull) IMAccount *account; // @synthesize account=_account;
 @property(readonly, nonatomic) NSString *guid; // @synthesize guid=_guid;
 @property(retain, nonatomic, setter=_setGUIDs:) NSMutableSet *_guids; // @synthesize _guids;
 @property(retain, nonatomic, nonnull) NSString *groupID; // @synthesize groupID=_groupID;

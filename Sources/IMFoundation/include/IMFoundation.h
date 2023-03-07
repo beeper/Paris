@@ -272,6 +272,8 @@ id IMGetDomainValueForKey(NSString * domain, NSString * key);
 BOOL IMGetDomainBoolForKey(NSString * domain, NSString * key);
 void IMSetDomainValueForKey(NSString * domain, NSString * key, id value);
 void IMSetDomainBoolForKey(NSString * domain, NSString * key, BOOL value);
+NSString * IMGetMainBundleIdentifier();
+NSBundle * IMGetMainBundle();
 
 NSString* const kFZServiceDefaultsAliasesKey;
 NSString* const kFZServiceDefaultsAliasKey;
