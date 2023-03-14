@@ -24,7 +24,7 @@
 - (void)setupAccountWithSetupParameters:(id)arg1 aliases:(id)arg2 completionHandler:(id)arg3;
 - (void)setupAccountWithLoginID:(id)arg1 password:(id)arg2 completionHandler:(id)arg3;
 - (void)setupAccountWithLoginID:(id)arg1 aliases:(id)arg2 password:(id)arg3 completionHandler:(id)arg4;
-- (id)accountWithUniqueID:(id)arg1;
+- (IDSAccount * _Nullable)accountWithUniqueID:(id)arg1;
 - (id)accountWithLoginID:(id)arg1 service:(id)arg2;
 - (id)serviceName;
 - (id)enabledAccounts;

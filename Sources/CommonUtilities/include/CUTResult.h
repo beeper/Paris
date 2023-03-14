@@ -11,11 +11,11 @@
 #import <Foundation/Foundation.h>
 
 @interface CUTResult<__covariant Success>: NSObject {
-	long long _state;
+    long long _state;
 }
 
-- (Success)value;
-- (NSError *)error;
+- (Success)inValue;
+- (NSError *)inError;
 @end
 
 #endif /* CUTResult_h */
