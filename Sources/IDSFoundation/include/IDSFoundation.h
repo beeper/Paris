@@ -2,6 +2,9 @@
 #define IDSFoundation_H
 
 #include <Foundation/Foundation.h>
+#import "IDSIDInfoOptions.h"
+#import "IDSIDInfoResult.h"
+#import "IDSIDKTData.h"
 
 @class IDSBaseMessage, IDSMessage;
 

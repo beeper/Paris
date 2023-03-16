@@ -6,7 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class IDSInternalQueueController, _IDSIDQueryController, IDSDestination;
+@class IDSInternalQueueController, _IDSIDQueryController, IDSDestination, IDSIDInfoOptions, IDSIDInfoResult;
 @protocol IDSIDQueryControllerDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -53,6 +53,7 @@ NS_ASSUME_NONNULL_END
 - (BOOL)refreshIDStatusForDestinations:(id)arg1 service:(id)arg2 listenerID:(id)arg3 queue:(id)arg4 errorCompletionBlock:(id)arg5;
 - (BOOL)forceRefreshIDStatusForDestinations:(NSArray<NSString*>*)arg1 service:(NSString*)arg2 listenerID:(NSString*)arg3 queue:(dispatch_queue_t)arg4 completionBlock:(void(^)(NSDictionary<NSString*,NSNumber*>* _Nonnull))arg5;
 - (BOOL)refreshIDStatusForDestinations:(NSArray<NSString*>*)arg1 service:(NSString*)arg2 listenerID:(NSString*)arg3 queue:(dispatch_queue_t)arg4 completionBlock:(void(^)(NSDictionary<NSString*,NSNumber*>* _Nonnull))arg5;
+- (void)idInfoForDestinations:(NSArray<NSString *>* _Nonnull)destinations service:(NSString * _Nonnull)service infoTypes:(int)types options:(IDSIDInfoOptions * _Nonnull)options listenerID:(NSString * _Nonnull)listenerID queue:(dispatch_queue_t _Nonnull)queue completionBlock:(void(^ _Nonnull)(NSDictionary<NSString *, IDSIDInfoResult *> *   _Nonnull))completion API_AVAILABLE(macos(13.0));
 - (BOOL)removeListenerID:(id)arg1 forService:(id)arg2;
 - (void)addListenerID:(id)arg1 forService:(id)arg2;
 - (void)removeDelegate:(id)arg1 forService:(id)arg2 listenerID:(id)arg3;

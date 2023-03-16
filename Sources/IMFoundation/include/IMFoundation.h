@@ -238,7 +238,7 @@ typedef NS_ENUM(uint32_t, FZErrorType) {
     kFZErrorOTREncryptionFailure,
     kFZErrorOTRDecryptionFailure,
     
-    kFZErrorLocalAccountDisabled,
+    kFZErrorLocalAccountDisabled, // 30
     kFZErrorLocalAccountDoesNotExist,
     kFZErrorLocalAccountNeedsUpdate,
     kFZErrorLocalAccountInvalid,
@@ -253,7 +253,7 @@ typedef NS_ENUM(uint32_t, FZErrorType) {
 
     kFZErrorServiceCrashed,
 
-    kFZErrorInvalidLocalCredentials,
+    kFZErrorInvalidLocalCredentials, // 40
 
     kFZErrorAttachmentDownloadFailureFileNotFound,
     
