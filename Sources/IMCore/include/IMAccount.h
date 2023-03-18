@@ -295,7 +295,7 @@ typedef NS_ENUM(NSInteger, IMAccountRegistrationFailureReason) {
 - (id)existingIMHandleWithID:(id)arg1 countryCode:(id)arg2;
 - (id)imHandleWithID:(id)arg1 countryCode:(id)arg2;
 - (id)_imHandleWithID:(id)arg1 alreadyCanonical:(BOOL)arg2 originalID:(id)arg3 countryCode:(id)arg4;
-- (id)imHandleWithID:(id)arg1 alreadyCanonical:(BOOL)arg2;
+- (IMHandle * _Nullable)imHandleWithID:(NSString * _Nonnull)arg1 alreadyCanonical:(BOOL)arg2;
 - (unsigned long long)defaultHandleCapabilities;
 - (IMHandle*)existingIMHandleWithID:(id)arg1;
 - (id)existingIMHandleWithID:(id)arg1 alreadyCanonical:(BOOL)arg2;
