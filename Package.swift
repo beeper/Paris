@@ -70,4 +70,5 @@ let package = Package(
  .withPrivateFrameworkBinding("login")
  .withPrivateFrameworkBinding("PassKitCore")
  .withPrivateFrameworkBinding("ConfigurationProfiles")
+ .withPrivateFrameworkBinding("IMDMessageServices")
  .withParisTarget()

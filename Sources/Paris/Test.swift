@@ -30,7 +30,7 @@ import IMDaemonCore
 import IMDPersistence
 import IMFoundation
 import IMSharedUtilities
-import LinkPresentation
+import LinkPresentationPrivate
 import LoggingSupport
 import login
 import RemoteTextInput

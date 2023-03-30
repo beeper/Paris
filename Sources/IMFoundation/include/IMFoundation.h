@@ -258,6 +258,10 @@ typedef NS_ENUM(uint32_t, FZErrorType) {
     kFZErrorAttachmentDownloadFailureFileNotFound,
     
     kFZErrorTextRenderingPreflightFailed,
+
+    // Not 100% certain about this one. Evidence is that in `-[IMDeliveryReceiptProcessingPipelineComponent _processDeliveryReceiptForMessageGUID:date:]`,
+    // it does an early break if `message.errorCode != 0x2b`. Then, after the early break, it logs that the message was already blackholed.
+    kFZErrorMessageWasBlackholed
 };
 
 NSString* IMRemoteObjectsRunLoopMode;
@@ -274,6 +278,8 @@ void IMSetDomainValueForKey(NSString * domain, NSString * key, id value);
 void IMSetDomainBoolForKey(NSString * domain, NSString * key, BOOL value);
 NSString * IMGetMainBundleIdentifier();
 NSBundle * IMGetMainBundle();
+
+id IMGetXPCDictionaryFromDictionary(xpc_object_t object, NSString * key);
 
 NSString* const kFZServiceDefaultsAliasesKey;
 NSString* const kFZServiceDefaultsAliasKey;
