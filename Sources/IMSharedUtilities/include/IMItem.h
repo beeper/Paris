@@ -116,7 +116,7 @@ typedef NS_ENUM(int64_t, IMItemType) {
 - (id)pluginSessionGUID;
 - (id)consumedSessionPayloads;
 
-- (IMTapback *)tapback API_AVAILABLE(macos(13.0), ios(16.0));
+- (IMTapback * _Nullable)tapback API_AVAILABLE(macos(13.0), ios(16.0));
 
 @end
 
