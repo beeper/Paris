@@ -64,7 +64,7 @@
 - (void)removeDelegate:(id)arg1;
 - (void)addDelegate:(id)arg1 queue:(id)arg2;
 - (void)___oldDealloc;
-- (id)__sendMessage:(id)arg1 queue:(id)arg2 reply:(id)arg3 failBlock:(id)arg4 waitForReply:(BOOL)arg5;
+- (id)__sendMessage:(xpc_object_t _Nonnull)arg1 queue:(dispatch_queue_t _Nullable)arg2 reply:(void (^_Nonnull)(xpc_object_t _Nonnull))arg3 failBlock:(void (^_Nonnull)(NSError * _Nullable))arg4 waitForReply:(BOOL)arg5;
 - (void)_requestRemoteDevicesForDestination:(id)arg1 service:(id)arg2 listenerID:(id)arg3 completionBlock:(id)arg4;
 - (void)_requestStatusForDestinations:(id)arg1 service:(id)arg2 waitForReply:(BOOL)arg3 forceRefresh:(BOOL)arg4 listenerID:(id)arg5 completionBlock:(id)arg6;
 - (void)_requestCachedStatusForDestinations:(id)arg1 service:(id)arg2 waitForReply:(BOOL)arg3 listenerID:(id)arg4 completionBlock:(id)arg5;
