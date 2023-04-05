@@ -11,7 +11,7 @@
 @class IDSIDKTData;
 
 NS_CLASS_AVAILABLE(13_0, 16_0)
-@interface IDSIDInfoResult
+@interface IDSIDInfoResult: NSObject
 - (NSString * _Nonnull)uri;
 - (long long)status;
 - (id _Nullable)endpoints;

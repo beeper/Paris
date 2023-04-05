@@ -8,7 +8,7 @@
 #ifndef IDSIDKTData_h
 #define IDSIDKTData_h
 
-@interface IDSIDKTData
+@interface IDSIDKTData: NSObject
 - (NSUUID *)verificationRequestID;
 @end
 
