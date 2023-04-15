@@ -12,6 +12,7 @@
 
 NS_CLASS_AVAILABLE(13_0, 16_0)
 @interface IDSIDInfoResult: NSObject
+- (instancetype _Nonnull)initWithURI:(NSString * _Nonnull)uri status:(long long)status endpoints:(id _Nullable)endpoints ktData:(IDSIDKTData * _Nullable)ktData gameCenterData:(id _Nullable)gameCenterData;
 - (NSString * _Nonnull)uri;
 - (long long)status;
 - (id _Nullable)endpoints;

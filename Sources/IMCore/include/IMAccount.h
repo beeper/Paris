@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, IMAccountRegistrationFailureReason) {
     IMAccountRegistrationFailureTooManyAttempts,
 
     IMAccountRegistrationFailureAccountUpdateNeeded,
-    IMAccountRegistrationFailureAccountNotAuthorized,
+    IMAccountRegistrationFailureAccountNotAuthorized, // 10
     IMAccountRegistrationFailureNewPasswordNeeded,
     IMAccountRegistrationFailurePermanentlyBlocked,
     IMAccountRegistrationFailureTemporarilyBlocked,
@@ -70,7 +70,10 @@ typedef NS_ENUM(NSInteger, IMAccountRegistrationFailureReason) {
 
     IMAccountRegistrationFailureUnconfirmedAlias,
 
-    IMAccountRegistrationFailureRegistrationUnsupported,
+    IMAccountRegistrationFailureRegistrationUnsupported, // 20
+
+    // Anything above .rawValue == 20 (so below this line) doesn't seem to exist on ventura
+    // (more specifically, if you pass it into `_IMStringFromFZRegistrationErrorreason`, it returns "Unknown")
     IMAccountRegistrationFailureRegistrationNoAliasesSpecified,
     
     IMAccountRegistrationFailureUnsupportedManagedID,
