@@ -49,6 +49,17 @@
 + (void)_blockUntilSendQueueIsEmpty;
 + (BOOL)_applicationWillTerminate;
 + (IMDaemonController* _Nonnull)sharedController;
+
+// `sharedInstance` is special. If `IMFeatureFlags.sharedFeatureFlags.isModernXPCEnabled` (which always returns `true`, at least on ventura),
+// it returns an `IMDistributingProxy` object. Otherwise, it just returns the same thing as sharedController.
+// Warning, though: Don't try to cast the return type to an `IMDistributingProxy`! Don't even try
+// `IMDaemonController.perform(#selector(IMDaemonController.sharedInstance)).takeRetainedValue() as! IMDistributingProxy`! It'll crash! It'll
+// show up as an `IMDistributingProxy` in lldb but crash no matter what you do! Why? Couldn't tell ya.
+// However, if you wanted to do
+// `IMDaemonController.perform(#selector(IMDaemonController.sharedInstance)).takeRetainedValue().perform(#selector(IMDistributingProxy.targets)).takeRetainedValue() as! NSArray,
+// well that'll work just fine.
+// The real type of this should be `id<IMDaemonProtocol> _Nonnull`, but we haven't pulled that into the headers yet (I suspect it's recent to the last few years), so
+// this works well enough for now.
 + (IMDaemonController* _Nonnull)sharedInstance;
 @property(copy, nonatomic) id prewarmingBlock; // @synthesize prewarmingBlock=_prewarmingBlock;
 @property(retain, nonatomic) NSMutableDictionary *requestQOSClassCompletionBlocks; // @synthesize requestQOSClassCompletionBlocks=_requestQOSClassCompletionBlocks;
