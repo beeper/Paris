@@ -74,19 +74,6 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 // IMCore
-@interface IMChatRegistry: NSObject
-@property (nonatomic, readonly, strong) NSArray<IMChat*> * allExistingChats;
-+(instancetype) sharedInstance;
-
--(IMChat* _Nullable)existingChatWithGUID:(NSString*)guid;
--(IMChat* _Nullable)existingChatWithChatIdentifier:(NSString*)chatIdentifier;
--(IMChat* _Nullable)existingChatWithGroupID:(NSString*)chatIdentifier;
-
--(NSString*)_sortedParticipantIDHashForParticipants:(NSArray<IMHandle*>*)participants;
--(void)_addChat:(IMChat*)chat participantSet:(NSString*)set;
-@end
-
-// IMCore
 @interface IMDaemonListener: NSObject
 -(void)addHandler:(id<IMDaemonListenerProtocol>)arg1;
 -(void)removeHandler:(id<IMDaemonListenerProtocol>)handler;

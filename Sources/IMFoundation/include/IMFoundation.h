@@ -108,6 +108,7 @@ BOOL IMStringIsBusinessID( NSString * string );
 CFStringRef IMCountryCodeForNumber(CFStringRef);
 NSString * IMFormatPhoneNumber(NSString *inputNumber, BOOL allowSpecialCharacters);
 NSString * IMFormattedDisplayStringForID(NSString * ID, NSInteger *outType);
+NSAttributedString * IMCreateSuperFormatStringWithAppendedFileTransfers(NSAttributedString * string, NSArray<NSString *> * fileTransferGUIDs);
 
 #ifndef IMFOUNDATION_CONST
 

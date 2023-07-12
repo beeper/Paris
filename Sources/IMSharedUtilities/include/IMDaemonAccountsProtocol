@@ -1,0 +1,39 @@
+//
+//  IMDaemonAccountsProtocol.h
+//  
+//
+//  Created by June Welker on 4/29/23.
+//
+
+#ifndef IMDaemonAccountsProtocol_h
+#define IMDaemonAccountsProtocol_h
+
+#import <Foundation/Foundation.h>
+
+NS_CLASS_AVAILABLE(13_0, 16_0)
+@protocol IMDaemonAccountsProtocol<NSObject>
+- (void)activateAccounts:(NSArray* _Nonnull)accounts;
+- (void)deactivateAccounts:(NSArray* _Nonnull)accounts;
+- (void)writeAccount:(NSString* _Nonnull)account defaults:(NSDictionary* _Nullable)defaults;
+- (void)addAccount:(NSString* _Nonnull)account defaults:(NSDictionary* _Nullable)defaults service:(NSString * _Nonnull)service;
+- (void)removeAccount:(NSString* _Nonnull)account;
+- (void)validateProfileAccount:(NSString* _Nonnull)account;
+- (void)authenticateAccount:(NSString* _Nonnull)account;
+- (void)registerAccount:(NSString* _Nonnull)account;
+- (void)unregisterAccount:(NSString* _Nonnull)account
+- (void)updateAuthorizationCredentials:(id)credentials token:(id)token account:(NSString* _Nonnull)account;
+- (void)setBlockingMode:(unsigned int)mode account:(NSString* _Nonnull)account;
+- (void)setAllowList:(NSArray* _Nullable)allowList account:(NSString* _Nonnull)account;
+- (void)setBlockList:(NSArray* _Nullable)blockList account:(NSString* _Nonnull)account;
+- (void)setBlockIdleStatus:(BOOL)blockIdleStatus account:(NSString* _Nonnull)account;
+- (void)passwordUpdatedAccount:(NSString* _Nonnull)account;
+- (void)addAliases:(NSArray* _Nonnull)aliases account:(NSString* _Nonnull)account;
+- (void)removeAliases:(NSArray* _Nonnull)aliases account:(NSString* _Nonnull)account;
+- (void)validateAliases:(NSArray* _Nonnull)aliases account:(NSString* _Nonnull)account;
+- (void)unvalidateAliases:(NSArray* _Nonnull)aliases account:(NSString* _Nonnull)account;
+- (void)enrollDeviceForSMSRelay:(NSString* _Nonnull)device account:(NSString* _Nonnull)account;
+- (void)unEnrollDeviceForSMSRelay:(NSString* _Nonnull)device account:(NSString* _Nonnull)account;
+- (void)enrollSelfDeviceForSMSRelay:(NSString* _Nonnull)account;
+@end
+
+#endif /* IMDaemonAccountsProtocol_h */

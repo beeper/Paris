@@ -30,4 +30,41 @@ typedef void (^IMAttachmentSyncFetchOperationCompletionBlock)(NSError * _Nullabl
 - (BOOL)isSuppressDatabaseUpdates;
 @end
 
+@interface IMDService
+@end
+
+@interface IMDChat: NSObject
+- (int)smsHandshakeState;
+- (void)updateSMSHandshakeState:(int)newState;
+- (NSDictionary<NSString *, id>* _Nullable)properties;
+- (NSString * _Nullable)serviceName;
+- (IMDService * _Nullable)service;
+- (NSString * _Nullable)accountID;
+@end
+
+@interface IMDChatRegistry: NSObject
++ (instancetype)sharedInstance;
+- (IMDChat * _Nullable)existingChatWithGUID:(NSString * _Nonnull)guid;
+@end
+
+@interface IMDFileTransfer: NSObject
+@end
+
+@interface IMDFileTransferCenter: NSObject
+- (NSArray * _Nonnull)sizePreviewsForTransferGUIDs:(NSArray<NSString *> * _Nonnull)guids;
+- (IMDFileTransfer * _Nullable)transferForGUID:(NSString * _Nonnull)guid;
+- (BOOL)_transferRequiresPreviewSizing:(IMDFileTransfer * _Nonnull)transfer;
+- (NSDictionary<NSString *, IMDFileTransfer *> * _Nonnull)guidToTransferMap;
+- (id)_clientPreviewConstraints;
++ (instancetype)sharedInstance;
+@end
+
+/*@interface IMTransferServicesController (PreviewGeneration)
+- (float)generatePreviewForTransfer:(IMFileTransfer * _Nonnull)transfer
+                     attachmentPath:(NSString *)path
+                    balloonBundleID:(NSString * _Nullable)balloonBundleID
+                           isFromMe:(BOOL)fromMe
+                    completionBlock:(void (^)(NSString * _Nullable, id arg1, id arg2))completionBlock;
+@end*/
+
 NS_ASSUME_NONNULL_END

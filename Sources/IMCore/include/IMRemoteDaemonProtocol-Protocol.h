@@ -195,7 +195,7 @@
 - (void)loadPagedHistoryForGUID:(NSString *)arg1 chatIdentifiers:(NSArray *)arg2 style:(unsigned char)arg3 onServices:(NSArray *)arg4 numberOfMessagesBefore:(unsigned long long)arg5 numberOfMessagesAfter:(unsigned long long)arg6 chatID:(NSString *)arg7 queryID:(NSString *)arg8;
 - (void)loadHistoryForIDs:(NSArray *)arg1 style:(unsigned char)arg2 onServices:(NSArray *)arg3 limit:(unsigned long long)arg4 beforeGUID:(NSString *)arg5 afterGUID:(NSString *)arg6 chatID:(NSString *)arg7 queryID:(NSString *)arg8;
 - (void)loadMessageWithGUID:(NSString *)arg1 queryID:(NSString *)arg2;
-- (void)loadChatsWithChatID:(NSString *)arg1;
+- (void)loadChatsWithChatID:(NSString *)arg1 API_DEPRECATED("Just not there", macos(10.0, 12.5));
 //-(void)loadChatsWithIdentifier:(void *)arg2 queryID:(void *)arg3
 - (id <IMRemoteDaemonProtocol>)synchronousReplyingRemoteDaemon;
 - (void)loadChatsWithIdentifier:(NSString*)arg1 queryID:(NSString*)arg2;

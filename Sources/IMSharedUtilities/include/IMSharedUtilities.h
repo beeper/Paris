@@ -23,6 +23,7 @@
 #import "IMAttachmentUtilities.h"
 #import "IMAttributedStringParser.h"
 #import "IMAttributedStringParserContext.h"
+#import "IMAudioPreviewGenerator.h"
 #import "IMAutomaticEventNotificationQueue.h"
 #import "IMBagUtilities.h"
 #import "IMBatteryStatus.h"
@@ -198,6 +199,12 @@ extern NSString* IMBalloonLayoutInfoTertiarySubcaptionKey;
 // MARK: - Bundle IDs
 extern NSString* IMBalloonBundleIdentifierBusiness;
 extern NSString* IMBalloonPluginIdentifierRichLinks;
+
+// MARK: - Preview Generation
+extern NSString * IMFileTransferAttributionInfoPreviewGenerationSucceededKey;
+extern NSString * IMFileTransferAttributionInfoPreviewGenerationSizeWidthKey;
+extern NSString * IMFileTransferAttributionInfoPreviewGenerationSizeHeightKey;
+extern NSString * IMFileTransferAttributionInfoPreviewGenerationConstraintsKey;
 
 void IMSharedHelperReplaceExtensionPayloadDataWithFilePathForMessage(IMMessageItem*, NSString*);
 

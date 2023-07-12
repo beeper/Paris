@@ -66,6 +66,7 @@
 + (id)guidByStrippingAuxPrefix:(id)arg1;
 + (id)AuxGUIDFromFileTransferGUID:(id)arg1;
 + (BOOL)_doesLocalURLRequireArchiving:(id)arg1;
++ (NSSet<NSString *> * _Nonnull)whitelistedKeys;
 @property(retain, nonatomic) NSString *originalGUID; // @synthesize originalGUID=_originalGUID;
 @property(nonatomic) BOOL appMessageFallbackImage; // @synthesize appMessageFallbackImage=_appMessageFallbackImage;
 @property(retain, nonatomic) NSDictionary *attributionInfo; // @synthesize attributionInfo=_attributionInfo;
@@ -73,7 +74,7 @@
 @property(retain, nonatomic, setter=_setLocalURL:) NSURL *localURL; // @synthesize localURL=_localURL;
 @property(retain, nonatomic) NSString *srCloudKitRecordID; // @synthesize srCloudKitRecordID=_srCloudKitRecordID;
 @property(retain, nonatomic) NSData *srCloudKitServerChangeTokenBlob; // @synthesize srCloudKitServerChangeTokenBlob=_srCloudKitServerChangeTokenBlob;
-@property(nonatomic) long long srCloudKitSyncState; // @synthesize srCloudKitSyncState=_srCloudKitSyncState;
+@property(nonatomic) long long srCloudKitSyncState API_DEPRECATED("It's just gone", macos(10.0, 12.5)); // @synthesize srCloudKitSyncState=_srCloudKitSyncState;
 @property(retain, nonatomic) NSString *cloudKitRecordID; // @synthesize cloudKitRecordID=_cloudKitRecordID;
 @property(retain, nonatomic) NSData *cloudKitServerChangeTokenBlob; // @synthesize cloudKitServerChangeTokenBlob=_cloudKitServerChangeTokenBlob;
 @property(nonatomic) long long cloudKitSyncState; // @synthesize cloudKitSyncState=_cloudKitSyncState;
@@ -136,6 +137,7 @@
 @property(readonly, retain, nonatomic) NSString *displayName;
 @property(readonly, nonatomic) BOOL isFinished;
 @property(readonly, nonatomic) BOOL canBeAccepted;
+@property(readonly, nonatomic) BOOL auxStateWasDowngraded;
 - (void)_calculateTypeInformation;
 - (id)_dictionaryRepresentation;
 - (BOOL)_updateWithDictionaryRepresentation:(id)arg1;

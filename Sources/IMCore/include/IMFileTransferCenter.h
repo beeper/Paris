@@ -83,6 +83,8 @@
 - (void)_removePendingTransfer:(id)arg1;
 - (void)_addPendingTransfer:(id)arg1;
 @property(readonly, nonatomic) BOOL hasPendingFileTransfers;
+- (void)setIssueSandboxEstensionsForTransfers:(BOOL)issue;
+- (BOOL)shouldIssueSandboxEstensionsForTransfers;
 - (void)dealloc;
 
 @end
