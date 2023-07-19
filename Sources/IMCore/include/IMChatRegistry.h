@@ -307,6 +307,7 @@
 - (void)mergeWithCopyRegistry:(id)arg1;
 - (id)copyForBatchProcessing;
 - (void)enumerateAllChatsAndAttachmentSizesWithOptions:(unsigned long long)arg1 usingBlock:(id)arg2;
+- (void)_processLoadedChatDictionaries:(NSArray<NSDictionary *>* _Nonnull)dictionaries;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -40,6 +40,8 @@ typedef void (^IMAttachmentSyncFetchOperationCompletionBlock)(NSError * _Nullabl
 - (NSString * _Nullable)serviceName;
 - (IMDService * _Nullable)service;
 - (NSString * _Nullable)accountID;
+- (NSDictionary * _Nullable)copyDictionaryRepresentation:(id _Nullable)arg1;
+- (NSDictionary * _Nullable)chatProperties;
 @end
 
 @interface IMDChatRegistry: NSObject
